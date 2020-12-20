@@ -24,7 +24,10 @@ sudo su postgres
 
 modifier la config postgres:
 -------------------------------------------
+https://pgtune.leopard.in.ua/#/
+
 sudo nano /etc/postgresql/12/main/postgresql.conf
+
 data_directory = '/postgres'            # use data in another directory
 
 démarrer la base:
