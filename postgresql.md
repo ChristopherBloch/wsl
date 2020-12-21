@@ -5,8 +5,11 @@ POSTGRESQL: TWEAK ON WSL
 créer un fichier /etc/wsl.conf
 -------------------------------------------
 [automount]
+
 enabled = true
+
 root = /mnt/
+
 options = "metadata,umask=22,fmask=11"
 
 reboot du linux:
@@ -20,6 +23,7 @@ sudo chown -R postgres:postgres /postgres
 initialiser la DB:
 -------------------------------------------
 sudo su postgres
+
 /usr/lib/postgresql/12/bin/initdb -D /postgres
 
 modifier la config postgres:
@@ -45,8 +49,11 @@ CREATE DATABASE cred;
 Création de la table:
 -------------------------------------------
 CREATE TABLE accounts (
+
 	username VARCHAR ( 200 ) NOT NULL,
+	
 	password VARCHAR ( 200 ) NOT NULL
+	
 );
 
 Import du CSV:
